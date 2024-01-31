@@ -1,18 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script>
-        // Function to increment and display the view count
-        function incrementViewCount() {
-            let count = localStorage.getItem('viewCount') || 0;
-            count = parseInt(count) + 1;
-            localStorage.setItem('viewCount', count);
-            document.getElementById('viewCount').textContent = count;
-        }
-
-        // Call the incrementViewCount function when the page loads
-        window.addEventListener('load', incrementViewCount);
-    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brandy Larramore - Data Analyst</title>
@@ -76,7 +64,6 @@
 
     <footer>
         <p>&copy; 2024 Brandy Larramore</p>
-        <p>Website Views: <span id="viewCount">0</span></p>
     </footer>
 </body>
 </html>
