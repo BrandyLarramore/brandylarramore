@@ -1,27 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script>
+    // Function to increment and display the view count
+    function incrementViewCount() {
+        let count = localStorage.getItem('viewCount') || 0;
+        count = parseInt(count) + 1;
+        localStorage.setItem('viewCount', count);
+        document.getElementById('viewCount').textContent = count;
+    }
+
+    // Call the incrementViewCount function when the page loads
+    window.addEventListener('load', incrementViewCount);
+</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brandy Larramore - Data Analyst</title>
     <style>
-        /* Add your CSS styles here for layout and design */
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: black; /* Set background color to black */
-            color: white; /* Set font color to white please */
-        }
-        h1 {
-            font-size: 24px;
-        }
-        h2 {
-            font-size: 18px;
-        }
-        img {
-            max-width: 100%;
-        }
-    </style>
+    /* Add your CSS styles here for layout and design */
+    body {
+        font-family: 'Open Sans', Arial, sans-serif; /* Use 'Open Sans' as the default font for the body */
+        text-align: center;
+        background-color: black; /* Set background color to black */
+        color: white; /* Set text color to white */
+    }
+    h1 {
+        font-family: 'Kalam', cursive; /* Use 'Kalam' as the font for the first header */
+        font-size: 24px;
+    }
+    h2 {
+        font-size: 18px;
+    }
+    p {
+        font-size: 16px;
+    }
+    img {
+        max-width: 100%;
+    }
+</style>
+
 </head>
 <body>
     <header>
@@ -57,6 +74,7 @@
 
 <footer>
     <p>&copy; 2024 Brandy Larramore</p>
+    <p>Website Views: <span id="viewCount">0</span></p>
 </footer>
 </body>
 </html>
